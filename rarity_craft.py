@@ -11,7 +11,7 @@ def plot(dataframe):
     #x_axis_val= st.selectbox('Select X-Axis Value', options=df.columns)
     #y_axis_val= st.selectbox('Select Y-Axis Value', options=df.columns)
     plot = px.scatter(dataframe,x='RANK', y='RARITY SCORE', width=1000, height=1000, color='Model', )
-    #plot = px.scatter(dataframe,x=x_axis_val, y='y_axis_val', width=1000, height=1000, color='MODEL')
+    #plot = px.scatter(dataframe,x=x_axis_val, y='y_axis_val', width=600, height=600, color='MODEL')
     plot.update_layout(legend_font_size=20)
 
     plot.update_layout(
