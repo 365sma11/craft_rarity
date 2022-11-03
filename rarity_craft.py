@@ -4,6 +4,8 @@ import streamlit as st
 import pandas as pd
 import plotly_express as px
 import csv
+st.set_page_config(page_title="Craft Rarity Multiplier",layout='wide')
+
 
 def plot(dataframe):
     #x_axis_val= st.selectbox('Select X-Axis Value', options=df.columns)
@@ -32,27 +34,8 @@ def plot(dataframe):
 
 st.title ('Crafts Rarity - Model Multiplier Compare')
 st.sidebar.title("MODEL MULTIPLIER")
-options=st.sidebar.radio('MULTIPLIER',options=['NO MULTIPLIER','5X','10X','25X','50X','100X'])
-#multiplier=st.sidebar.slider('Multiplier',1,100)
+options=st.sidebar.radio('MODEL MULTIPLIER',options=['NO MULTIPLIER','5X','10X','25X','50X','100X'])
 
-# if st.sidebar.button('Calculate'):
-#     count=1
-#     filename ="crafts_rank2.csv"
- 
-#     # opening the file using "with"
-#     # statement
-#     with open(filename, 'r') as data:
-#         for line in csv.DictReader(data):
-#             st.write(line["MODEL RARITY"]*5)
-#     # df=pd.read_csv("crafts_rank2.csv")
-#     # plot(df)
-#     #df[count]['RARITY SCORE']=df[count]['MODEL RARITY']*multiplier +df[count]['SUBTOTAL RARITY']
-#     #st.write(df[0]['RARITY SCORE'])
-#     # while plot:
-#     #     count=count+1
-#     #     df[count]['RARITY SCORE']=df[count]['MODEL RARITY']*multiplier +df[count]['SUBTOTAL RARITY']
-#     # st.write('Done')
-#     # plot(df)
 
 
 if options == 'NO MULTIPLIER':
