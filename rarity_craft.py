@@ -46,15 +46,15 @@ def plot(dataframe):
         'plot_bgcolor': 'rgba(71, 71, 71, 0.5)',
         'paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 
-    
-
     st.plotly_chart(plot)
-    
+
+
+
 
 set_background('craft.png')
 st.title ('Crafts Rarity - Model Multiplier Compare')
 st.sidebar.title("MODEL MULTIPLIER")
-options=st.sidebar.radio('MODEL MULTIPLIER',options=['NO MULTIPLIER','5X','10X','25X','50X','100X'])
+options=st.sidebar.radio('MODEL MULTIPLIER',options=['NO MULTIPLIER','10X','25X','100X'])
 
 
 
@@ -62,20 +62,13 @@ if options == 'NO MULTIPLIER':
     df=pd.read_csv("crafts_rank1x.csv")
     plot(df)
 
-elif options == '5X':
-    df=pd.read_csv("crafts_rank5x.csv")
-    plot(df)
-
 elif options == '10X':
     df=pd.read_csv("crafts_rank10x.csv")
     plot(df)
+       
 
 elif options == '25X':
     df=pd.read_csv("crafts_rank25x.csv")
-    plot(df)
-
-elif options == '50X':
-    df=pd.read_csv("crafts_rank50x.csv")
     plot(df)
 
 elif options == '100X':
